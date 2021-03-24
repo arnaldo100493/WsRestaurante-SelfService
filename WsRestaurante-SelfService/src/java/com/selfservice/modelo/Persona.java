@@ -13,17 +13,18 @@ import java.sql.Date;
  */
 public abstract class Persona {
 
-    protected int idPersona;
-    protected String cedula;
-    protected String nombre;
-    protected String apellido;
-    protected String direccion;
-    protected String telefono;
-    protected String correo;
-    protected Date fechaNacimiento;
-    protected String genero;
-    protected Date fechaRegistro;
-    protected Date fechaModificacion;
+    private int idPersona;
+    private String cedula;
+    private String nombre;
+    private String apellido;
+    private String direccion;
+    private String telefono;
+    private String correoElectronico;
+    private int edad;
+    private Date fechaNacimiento;
+    private String genero;
+    private Date fechaRegistro;
+    private Date fechaModificacion;
 
     public Persona() {
         this.idPersona = 0;
@@ -32,7 +33,9 @@ public abstract class Persona {
         this.apellido = "";
         this.direccion = "";
         this.telefono = "";
-        this.correo = "";
+        this.correoElectronico = "";
+        this.edad = 0;
+        this.fechaNacimiento = null;
         this.fechaRegistro = null;
         this.fechaModificacion = null;
 
@@ -45,34 +48,53 @@ public abstract class Persona {
         this.apellido = "";
         this.direccion = "";
         this.telefono = "";
-        this.correo = "";
+        this.correoElectronico = "";
+        this.edad = 0;
+        this.fechaNacimiento = null;
         this.fechaRegistro = null;
         this.fechaModificacion = null;
 
     }
 
-    public Persona(String cedula, String nombre, String apellido, String direccion, String telefono, String correo, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
+    public Persona(String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
         this.idPersona = 0;
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.correo = correo;
+        this.edad = edad;
+        this.correoElectronico = correoElectronico;
         this.fechaNacimiento = fechaNacimiento;
         this.genero = genero;
         this.fechaRegistro = fechaRegistro;
         this.fechaModificacion = fechaModificacion;
     }
+    
+    public Persona(String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero){
+        this.idPersona = 0;
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.edad = edad;
+        this.correoElectronico = correoElectronico;
+        this.fechaNacimiento = fechaNacimiento;
+        this.genero = genero;
+        this.fechaRegistro = null;
+        this.fechaModificacion = null;
+    }
 
-    public Persona(int idPersona, String cedula, String nombre, String apellido, String direccion, String telefono, String correo, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
+    public Persona(int idPersona, String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
         this.idPersona = idPersona;
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.correo = correo;
+        this.correoElectronico = correoElectronico;
+        this.edad = edad;
         this.fechaNacimiento = fechaNacimiento;
         this.genero = genero;
         this.fechaRegistro = fechaRegistro;
@@ -81,7 +103,7 @@ public abstract class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "idPersona=" + getIdPersona() + ", cedula=" + getCedula() + ", nombre=" + getNombre() + ", apellido=" + getApellido() + ", direccion=" + getDireccion() + ", telefono=" + getTelefono() + ", correo=" + getCorreo() + ", fechaNacimiento=" + getFechaNacimiento() + ", genero=" + getGenero() + ", fechaRegistro=" + getFechaRegistro() + ", fechaModificacion=" + getFechaModificacion() + '}';
+        return "Persona{" + "idPersona=" + getIdPersona() + ", cedula=" + getCedula() + ", nombre=" + getNombre() + ", apellido=" + getApellido() + ", direccion=" + getDireccion() + ", telefono=" + getTelefono() + ", correoElectronico=" + getCorreoElectronico() + ", edad=" + getEdad() + ", fechaNacimiento=" + getFechaNacimiento() + ", genero=" + getGenero() + ", fechaRegistro=" + getFechaRegistro() + ", fechaModificacion=" + getFechaModificacion() + '}';
     }
 
     /**
@@ -169,17 +191,31 @@ public abstract class Persona {
     }
 
     /**
-     * @return the correo
+     * @return the correoElectronico
      */
-    public String getCorreo() {
-        return correo;
+    public String getCorreoElectronico() {
+        return correoElectronico;
     }
 
     /**
-     * @param correo the correo to set
+     * @param correoElectronico the correoElectronico to set
      */
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
+
+    /**
+     * @return the edad
+     */
+    public int getEdad() {
+        return edad;
+    }
+
+    /**
+     * @param edad the edad to set
+     */
+    public void setEdad(int edad) {
+        this.edad = edad;
     }
 
     /**

@@ -30,13 +30,28 @@ public class Cliente extends Persona {
         this.idCliente = idCliente;
     }
 
-    public Cliente(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correo, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
-        super(cedula, nombre, apellido, direccion, telefono, correo, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
+    public Cliente(String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
+        super(cedula, nombre, apellido, direccion, telefono, correoElectronico, edad, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
+        this.idCliente = 0;
+    }
+    
+    public Cliente(String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero) {
+        super(cedula, nombre, apellido, direccion, telefono, correoElectronico, edad, fechaNacimiento, genero);
+        this.idCliente = 0;
+    }
+    
+     public Cliente(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero) {
+        super(cedula, nombre, apellido, direccion, telefono, correoElectronico, edad, fechaNacimiento, genero);
         this.idCliente = idCliente;
     }
 
-    public Cliente(int idCliente, int idPersona, String cedula, String nombre, String apellido, String direccion, String telefono, String correo, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
-        super(idPersona, cedula, nombre, apellido, direccion, telefono, correo, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
+    public Cliente(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
+        super(cedula, nombre, apellido, direccion, telefono, correoElectronico, edad, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
+        this.idCliente = idCliente;
+    }
+
+    public Cliente(int idCliente, int idPersona, String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
+        super(idPersona, cedula, nombre, apellido, direccion, telefono, correoElectronico, edad, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
         this.idCliente = idCliente;
     }
 

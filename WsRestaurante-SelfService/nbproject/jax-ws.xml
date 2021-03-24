@@ -4,6 +4,12 @@
     <service name="WsRestauranteSelfService">
       <implementation-class>com.selfservice.servicioweb.WsRestauranteSelfService</implementation-class>
     </service>
+    <service name="WsClienteRestauranteSelfService">
+      <implementation-class>com.selfservice.servicioweb.WsClienteRestauranteSelfService</implementation-class>
+    </service>
+    <service name="WsEmpleadoRestauranteSelfService">
+      <implementation-class>com.selfservice.servicioweb.WsEmpleadoRestauranteSelfService</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

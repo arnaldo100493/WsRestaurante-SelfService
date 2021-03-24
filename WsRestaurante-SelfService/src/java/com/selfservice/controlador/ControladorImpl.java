@@ -29,30 +29,36 @@ public class ControladorImpl<E> implements Controlador<E> {
 
     @Override
     public E findById(int id) {
-        for (int i = 0; i < listadoElementos.size(); i++) {
-
-        }
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.listadoElementos.get(id);
     }
 
     @Override
     public List<E> list() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.listadoElementos;
     }
 
     @Override
     public boolean edit(E entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i = 0; i < this.listadoElementos.size(); i++) {
+            E elemento = this.listadoElementos.get(i);
+            this.listadoElementos.remove(elemento);
+            this.listadoElementos.add(entidad);
+        }
+        return true;
     }
 
     @Override
     public E delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        E elemento = null;
+        for (int i = 0; i < this.listadoElementos.size(); i++) {
+            elemento = this.listadoElementos.remove(id);
+        }
+        return elemento;
     }
 
     @Override
     public boolean delete(E entidad) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.listadoElementos.remove(entidad);
+        return true;
     }
-
 }

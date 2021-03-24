@@ -55,8 +55,8 @@ public class Empleado extends Persona {
         this.salario = salario;
     }
 
-    public Empleado(int idEmpleado, String numeroEmpleado, String factorRh, String cargo, int salario, String cedula, String nombre, String apellido, String direccion, String telefono, String correo, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
-        super(cedula, nombre, apellido, direccion, telefono, correo, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
+    public Empleado(int idEmpleado, String numeroEmpleado, String factorRh, String cargo, int salario, String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
+        super(cedula, nombre, apellido, direccion, telefono, correoElectronico, edad, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
         this.idEmpleado = idEmpleado;
         this.numeroEmpleado = numeroEmpleado;
         this.factorRh = factorRh;
@@ -64,8 +64,8 @@ public class Empleado extends Persona {
         this.salario = salario;
     }
 
-    public Empleado(int idEmpleado, String numeroEmpleado, String rh, String cargo, int salario, int idPersona, String cedula, String nombre, String apellido, String direccion, String telefono, String correo, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
-        super(idPersona, cedula, nombre, apellido, direccion, telefono, correo, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
+    public Empleado(int idEmpleado, String numeroEmpleado, String rh, String cargo, int salario, int idPersona, String cedula, String nombre, String apellido, String direccion, String telefono, String correoElectronico, int edad, Date fechaNacimiento, String genero, Date fechaRegistro, Date fechaModificacion) {
+        super(idPersona, cedula, nombre, apellido, direccion, telefono, correoElectronico, edad, fechaNacimiento, genero, fechaRegistro, fechaModificacion);
         this.idEmpleado = idEmpleado;
         this.numeroEmpleado = numeroEmpleado;
         this.factorRh = rh;
